@@ -1,1 +1,54 @@
-<p>login works!</p>
+<div class="py-16">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col items-center text-center gap-8">
+        <div class="flex flex-col gap-3">
+            <h1 class="text-red-700 text-4xl font-bold">Angular Maestro</h1>
+            <p class="text-taupe-500">Domina el framework del futuro.</p>
+        </div>
+        <div class="p-8 rounded-xl bg-white flex flex-col gap-12 shadow-2xl">
+            <div class="flex flex-col gap-1 text-start">
+                <h3 class="font-bold text-2xl">Bienvenido de nuevo</h3>
+                <p class="text-taupe-500 text-sm">Ingresa tus credenciales para continuar con tu aprendizaje.</p>
+            </div>
+            <form class="text-start flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <span class="text-taupe-500 font-bold">Correo electrónico</span>
+                    <div class="bg-bg-primary flex items-center rounded-lg">
+                        <label class="text-taupe-500 material-symbols-outlined cursor-text text-center ps-4 py-4" for="email">
+                            mail
+                        </label>
+                        <input class="w-full p-4 focus:outline-none" id="email" type="email" placeholder="tu@email.com">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-taupe-500 font-bold">Contraseña</span>
+                        <span class="text-red-700 cursor-pointer text-sm font-bold">¿Olvidaste tu contraseña?</span>
+                    </div>
+                    <div class="bg-bg-primary flex items-center rounded-lg">
+                        <label class="text-taupe-500 material-symbols-outlined cursor-text text-center ps-4 py-4" for="pass">
+                            lock
+                        </label>
+                        <input class="w-full p-4 focus:outline-none" id="pass" type="password" placeholder="●●●●●●●●">
+                    </div>
+                </div>
+                <button class="bg-red-700 font-bold text-white cursor-pointer py-3 rounded-lg">Iniciar Sesión</button>
+            </form>
+            <div class="flex items-center">
+                <hr class="grow border-t border-gray-300">
+                <span class="px-4 text-taupe-500 text-sm">O CONTINÚA CON</span>
+                <hr class="grow border-t border-gray-300">
+            </div>
+            <div class="flex justify-center items-center gap-4">
+                <button class="flex items-center cursor-pointer gap-2 bg-red-100 px-6 py-2 rounded-lg hover:bg-red-200 transition-colors">
+                    <img class="w-10" src="google.png" alt="Logo de Google">
+                    Google
+                </button>
+                <button class="flex items-center cursor-pointer gap-2 bg-red-100 px-6 py-2 rounded-lg hover:bg-red-200 transition-colors">
+                    <img class="w-10" src="github.png" alt="Logo de GitHub">
+                    GitHub
+                </button>
+            </div>
+            <p class="text-taupe-600 flex justify-center gap-4">¿No tienes una cuenta? <button class="text-red-700 font-bold cursor-pointer" routerLink="/register">Regístrate gratis</button></p>
+        </div>
+    </div>
+</div>
