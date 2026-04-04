@@ -1,1 +1,89 @@
-<p>register works!</p>
+<div class="flex">
+    <div class="bg-black py-32 px-16 text-white flex flex-col gap-8 justify-center">
+        <h2 class="font-bold text-7xl">Domina el<br><span class="text-red-700">Futuro</span></h2>
+        <p class="font-medium text-taupe-600 text-xl">Únete a la élite del desarrollo con Angular y transforma tu carrera profesional hoy mismo.</p>
+        <ul class="flex flex-col gap-4">
+            <li class="text-taupe-300 font-medium flex items-center gap-2">
+                <div class="bg-red-900 p-1 rounded-4xl flex">
+                    <span class="material-symbols-outlined text-red-500">
+                        check_circle
+                    </span>
+                </div>
+                Certificación Oficial
+            </li>
+            <li class="text-taupe-300 font-medium flex items-center gap-2">
+                <div class="bg-red-900 p-1 rounded-4xl flex">
+                    <span class="material-symbols-outlined text-red-500">
+                        code
+                    </span>
+                </div>
+                Proyectos Reales
+            </li>
+            <li class="text-taupe-300 font-medium flex items-center gap-2">
+                <div class="bg-red-900 p-1 rounded-4xl flex">
+                    <span class="material-symbols-outlined text-red-500">
+                        link
+                    </span>
+                </div>
+                Acceso de por vida
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col gap-12 mx-auto px-8 py-16">
+        <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-2xl">Comienza tu viaje</h2>
+            <p class="text-taupe-500 font-medium">Crea tu cuenta de estudiante en segundos.</p>
+        </div>
+        <form class="flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+                <span class="text-taupe-500 font-bold">Nombre completo </span>
+                <div class="bg-bg-secondary flex items-center rounded-lg">
+                    <label class="text-taupe-500 material-symbols-outlined cursor-text text-center ps-4 py-4" for="nombre">
+                        person
+                    </label>
+                    <input class="w-full p-4 focus:outline-none" id="nombre" type="text" placeholder="Ej: Agustín Fernandez">
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <span class="text-taupe-500 font-bold">Correo electrónico</span>
+                <div class="bg-bg-secondary flex items-center rounded-lg">
+                    <label class="text-taupe-500 material-symbols-outlined cursor-text text-center ps-4 py-4" for="email">
+                        mail
+                    </label>
+                    <input class="w-full p-4 focus:outline-none" id="email" type="email" placeholder="tu@email.com">
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <span class="text-taupe-500 font-bold">Contraseña</span>
+                <div class="bg-bg-secondary flex items-center rounded-lg">
+                    <label class="text-taupe-500 material-symbols-outlined cursor-text text-center ps-4 py-4" for="pass">
+                        lock
+                    </label>
+                    <input class="w-full p-4 focus:outline-none" id="pass" type="pass" placeholder="●●●●●●●●">
+                </div>
+            </div>
+            <button class="bg-red-700 font-bold text-white cursor-pointer py-3 rounded-lg">Crear mi cuenta gratuita</button>
+        </form>
+        <div class="flex items-center">
+            <hr class="grow border-t border-gray-300">
+            <span class="px-4 text-taupe-500 text-sm">O REGISTRATE CON</span>
+            <hr class="grow border-t border-gray-300">
+        </div>
+        <div class="flex justify-center items-center gap-4">
+            <button class="flex items-center cursor-pointer gap-2 bg-red-100 px-6 py-2 rounded-lg hover:bg-red-200 transition-colors">
+                <img class="w-10" src="google.png" alt="Logo de Google">
+                    Google
+            </button>
+            <button class="flex items-center cursor-pointer gap-2 bg-red-100 px-6 py-2 rounded-lg hover:bg-red-200 transition-colors">
+                <img class="w-10" src="github.png" alt="Logo de GitHub">
+                    GitHub
+            </button>
+        </div>
+        <p class="text-taupe-600 flex justify-center gap-4">
+            ¿Ya tenes cuenta?
+            <button class="text-red-700 font-bold cursor-pointer" routerLink="/login">
+                Iniciar sesión
+            </button>
+        </p>
+    </div>
+</div>
