@@ -1,0 +1,26 @@
+
+<div class="py-16 2xl:py-32 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-20">
+        <div class="flex flex-col items-center gap-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold">Especializaciones</h2>
+            <p class="text-taupe-500 font-medium text-lg">Continúa tu formación con nuestras rutas técnicas avanzadas.</p>
+        </div>
+        <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            @for (course of courses; track course.id) {
+                <div class="border border-[#f5e9d5] rounded-2xl shadow-lg flex flex-col justify-between h-full">
+                    <div class="w-full h-48 md:h-56 overflow-hidden object-center">
+                        <img [src]="course.imagen" class="rounded-t-2xl w-full h-full object-cover object-center" alt="Imagen del curso">
+                    </div>
+                    <div class="bg-bg-primary rounded-b-2xl p-6 flex flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-2xl font-bold">{{course.titulo}}</h3>
+                            <p class="text-taupe-500 font-medium">{{course.subtitulo}}</p>
+                            <span class="text-green-700 font-bold text-lg">${{course.precio}}<span class="text-sm font-normal">USD</span></span>
+                        </div>
+                        <button [routerLink]="course.link" class="py-3 bg-red-700 rounded-lg text-white font-bold cursor-pointer hover:bg-red-800 transition-colors">{{course.textoLink}}</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
