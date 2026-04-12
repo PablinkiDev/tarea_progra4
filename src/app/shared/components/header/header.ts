@@ -7,4 +7,10 @@ import { Angular } from "../../ui/svg/angular/angular";
   imports: [RouterLink, Angular],
   templateUrl: './header.html',
 })
-export class Header {}
+export class Header {
+  isMenuOpen: boolean = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+}

@@ -1,0 +1,43 @@
+<!-- 
+    <p>{{this.repos()[0].name}}</p>
+-->
+<div class="flex flex-col gap-10">
+    <div class="flex items-center gap-4">
+        <h3 class="font-bold text-xl px-2">Repositorios</h3>
+        <hr class="h-1 w-full border-2 border-bg-secondary">
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+        @for (r of repos(); track r.name) {
+            <a target="_blank" [href]="r.clone_url" class="hover:brightness-95 transition-all block">
+                <div class="w-full h-full flex flex-col justify-between gap-4 bg-bg-secondary p-4 rounded-2xl border border-transparent hover:border-red-200 shadow-sm">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h4 class="flex items-center gap-3 text-xl font-bold break-all">
+                                <span class="text-red-700 material-symbols-outlined">
+                                    folder
+                                </span>
+                                {{r.name}}
+                            </h4>
+                        </div>
+                        <div class="bg-red-300 rounded flex justify-center items-center px-2 py-1 shrink">
+                            <p class="text-red-700 font-bold text-[10px] tracking-wider">PÚBLICO</p>
+                        </div>
+                    </div>
+                    <p class="text-taupe-500 grow font-medium min-h-12">
+                        @if (r.description) {
+                            {{r.description}}
+                        } @else {
+                            <span class="italic">Este repositorio no tiene descripción</span>
+                        }
+                    </p>
+                    <p class="flex items-center gap-2 text-lg">
+                        <span class="material-symbols-outlined text-red-700">
+                            code
+                        </span>
+                        {{r.language}}
+                    </p>
+                </div>
+            </a>
+        }
+    </div>
+</div>

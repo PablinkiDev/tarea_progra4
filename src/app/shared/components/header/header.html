@@ -1,13 +1,13 @@
-<nav class="text-gray-500 font-medium px-6 py-2  sm:px-12 sm:py-4 flex justify-between gap-2 shadow-2xs">
-    <button class="hidden sm:flex items-center gap-2 text-red-700 text-lg cursor-pointer transition-colors hover:text-hover-text" routerLink="">
+<nav class="relative text-gray-500 font-medium px-6 py-2 sm:px-12 sm:py-4 flex justify-between items-center gap-2 shadow-2xs z-20">
+    <button class="flex items-center gap-2 text-red-700 text-lg cursor-pointer transition-colors hover:text-hover-text" routerLink="">
         <app-angular />
         Angular Master
     </button>
-    <div class="flex gap-4 sm:gap-8">
+    <div class="hidden md:flex gap-4 sm:gap-8">
         <button class="text-xs sm:text-sm md:text-lg cursor-pointer transition-colors hover:text-hover-text" routerLink="">WELCOME</button>
         <button class="text-xs sm:text-sm md:text-lg cursor-pointer transition-colors hover:text-hover-text" routerLink="about-me">ABOUT ME</button>
     </div>
-    <div class="flex gap-4 sm:gap-8">
+    <div class="hidden md:flex gap-4 sm:gap-8">
         <button routerLink="profile" class="p-4 rounded-4xl cursor-pointer hover:bg-bg-secondary transition-colors flex">
             <span class="material-symbols-outlined">
                 person
@@ -16,4 +16,29 @@
         <button class="text-xs sm:text-sm md:text-lg cursor-pointer transition-colors hover:text-hover-text" routerLink="login">LOGIN</button>
         <button class="text-xs sm:text-sm md:text-lg py-2 px-4 rounded-md cursor-pointer text-white bg-red-700 transition-colors hover:bg-red-600" routerLink="register">REGISTER</button>
     </div>
+    <button class="flex md:hidden cursor-pointer" (click)="toggleMenu()">
+        <span class="material-symbols-outlined">
+            {{isMenuOpen ? 'close' : 'menu'}}
+        </span>
+    </button>
 </nav>
+
+<div 
+    class="z-10 fixed inset-0 bg-white transition-transform duration-300 md:hidden"
+    [class.translate-x-0]="isMenuOpen"
+    [class.translate-x-full]="!isMenuOpen"
+>
+    <div class="flex flex-col gap-6 mt-16 text-xl p-4" >
+        <button (click)="toggleMenu()" routerLink="" class="border-b border-gray-100 pb-2 text-start cursor-pointer">WELCOME</button>
+        <button (click)="toggleMenu()" routerLink="about-me" class="border-b border-gray-100 pb-2 text-start cursor-pointer">ABOUT ME</button>
+        <button (click)="toggleMenu()" routerLink="profile" class="border-b border-gray-100 pb-2 text-start cursor-pointer">PROFILE</button>
+        <button (click)="toggleMenu()" routerLink="login" 
+                class="bg-red-200 text-red-700 py-3 rounded-md text-center font-bold shadow-lg cursor-pointer">
+            LOGIN
+        </button>
+        <button (click)="toggleMenu()" routerLink="register" 
+                class="bg-red-700 text-white py-3 rounded-md text-center font-bold shadow-lg cursor-pointer">
+            REGISTER
+        </button>
+    </div>
+</div>

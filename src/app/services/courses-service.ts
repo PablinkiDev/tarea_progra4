@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ICourse } from '../interface/ICourse';
+import { ICourse } from '../interface/icourse';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,7 @@ export class CoursesService {
       precio: 139,
       imagen: "backend-course.webp",
       textoLink: "Ver curso",
-      link: ""
+      link: "",
     },
     { 
       id: '2',

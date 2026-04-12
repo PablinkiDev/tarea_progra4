@@ -1,1 +1,5 @@
-<p>profile works!</p>
+@if(this.usuarioGithub()) {
+    <app-success-profile [profile]="this.usuarioGithub()" [repos]="this.reposGithub()" />
+} @else {
+    <app-not-profile />
+}
